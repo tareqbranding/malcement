@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مالسمينت | Malcement</title>
+  <meta name="description" content="مالسمينت لتجارة مواد البناء والإسمنت" />
+  <style>
+    * { box-sizing: border-box; }
+
+    :root{
+      --green:#0f5e4f;
+      --green-dark:#0b4036;
+      --gold:#cfa44a;
+      --gold-soft:#e8cb8c;
+      --white:#ffffff;
+      --bg:#f8fbfa;
+      --text:#1d2d2a;
+      --muted:#6b7c78;
+      --line:rgba(15,94,79,.12);
+      --shadow:0 18px 50px rgba(10,53,45,.10);
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      min-height:100%;
+      font-family: Arial, Tahoma, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(207,164,74,.14), transparent 22%),
+        radial-gradient(circle at bottom right, rgba(15,94,79,.10), transparent 24%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(rgba(15,94,79,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,94,79,.035) 1px, transparent 1px);
+      background-size:34px 34px;
+      mask-image:linear-gradient(to bottom, rgba(0,0,0,.16), transparent 70%);
+      -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.16), transparent 70%);
+    }
+
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px 16px;
+    }
+
+    .card{
+      width:100%;
+      max-width:470px;
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      position:relative;
+      backdrop-filter: blur(10px);
+    }
+
+    .top-accent{
+      height:6px;
+      background:linear-gradient(90deg, var(--green-dark), var(--green), var(--gold));
+    }
+
+    .inner{
+      padding:24px 18px 18px;
+    }
+
+    .hero{
+      text-align:center;
+      margin-bottom:18px;
+    }
+
+    .logo-shell{
+      width:160px;
+      height:160px;
+      margin:0 auto 8px;
+      border-radius:24px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:
+        radial-gradient(circle at top, rgba(207,164,74,.12), transparent 45%),
+        linear-gradient(180deg, #ffffff, #f5f8f7);
+      border:1px solid rgba(15,94,79,.10);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.95);
+    }
+
+    .logo{
+      width:138px;
+      height:auto;
+      display:block;
+    }
+
+    h1{
+      margin:8px 0 2px;
+      font-size:34px;
+      color:var(--green-dark);
+      line-height:1.1;
+    }
+
+    .en{
+      display:block;
+      direction:ltr;
+      color:var(--gold);
+      font-size:18px;
+      letter-spacing:2px;
+      margin-top:5px;
+      font-weight:bold;
+    }
+
+    .tagline{
+      margin:10px auto 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+      max-width:320px;
+    }
+
+    .links{
+      display:grid;
+      gap:10px;
+    }
+
+    .link{
+      text-decoration:none;
+      color:var(--text);
+      background:#fff;
+      border:1px solid rgba(15,94,79,.12);
+      border-radius:18px;
+      min-height:56px;
+      padding:12px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      font-size:17px;
+      font-weight:bold;
+      box-shadow:0 8px 18px rgba(15,94,79,.045);
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .link:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(15,94,79,.08);
+      border-color:rgba(15,94,79,.22);
+    }
+
+    .link.primary{
+      background:linear-gradient(135deg, var(--green), #167968);
+      color:#fff;
+      border-color:transparent;
+    }
+
+    .icon{
+      width:22px;
+      height:22px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      flex:0 0 auto;
+    }
+
+    .icon svg{
+      width:100%;
+      height:100%;
+      display:block;
+      fill:currentColor;
+    }
+
+    .link:not(.primary) .icon{ color:var(--green-dark); }
+    .link.primary .icon{ color:#fff; }
+
+    .mini-contact{
+      margin-top:16px;
+      padding-top:14px;
+      border-top:1px solid rgba(15,94,79,.10);
+      text-align:center;
+    }
+
+    .mini-title{
+      margin:0 0 8px;
+      font-size:16px;
+      color:var(--green-dark);
+      font-weight:bold;
+    }
+
+    .mini-line{
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.9;
+      margin:0;
+    }
+
+    .mini-line a{
+      color:var(--muted);
+      text-decoration:none;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:10px;
+      font-size:11px;
+      color:#91a09d;
+    }
+
+    @media (max-width:420px){
+      .card{ border-radius:24px; }
+      .inner{ padding:20px 13px 16px; }
+      .logo-shell{ width:145px; height:145px; }
+      .logo{ width:124px; }
+      h1{ font-size:30px; }
+      .en{ font-size:16px; }
+      .link{ font-size:15px; min-height:54px; }
+      .mini-line{ font-size:12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="top-accent"></div>
+
+      <div class="inner">
+        <div class="hero">
+          <div class="logo-shell">
+            <img src="malcement-logo.png" alt="Malcement Logo" class="logo" />
+          </div>
+
+          <h1>
+            مالسمينت
+            <span class="en">MALCEMENT</span>
+          </h1>
+
+          <p class="tagline">لتجارة مواد البناء والإسمنت<br>روابطنا الرسمية وتواصل مباشر معنا</p>
+        </div>
+
+        <div class="links">
+          <a class="link primary" href="https://wa.me/970566571439" target="_blank" rel="noopener">
+            <span class="icon" aria-hidden="true">
+              <!-- WhatsApp -->
+              <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.53 0 .22 5.31.22 11.84c0 2.09.55 4.12 1.59 5.9L0 24l6.43-1.69a11.8 11.8 0 0 0 5.63 1.44h.01c6.53 0 11.84-5.31 11.84-11.84 0-3.16-1.23-6.12-3.39-8.43Zm-8.46 18.2h-.01a9.86 9.86 0 0 1-5.02-1.37l-.36-.21-3.82 1 1.02-3.72-.24-.38a9.84 9.84 0 0 1-1.51-5.16c0-5.43 4.42-9.84 9.86-9.84 2.63 0 5.1 1.02 6.95 2.88a9.77 9.77 0 0 1 2.89 6.96c0 5.44-4.42 9.84-9.86 9.84Zm5.4-7.36c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.35.22-.65.08-.3-.15-1.25-.46-2.39-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.58-.91-2.16-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.19 5.06 4.47.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.57-.08 1.76-.72 2.01-1.42.25-.69.25-1.29.17-1.42-.08-.13-.28-.2-.57-.35Z"/></svg>
+            </span>
+            <span>واتساب الأعمال</span>
+          </a>
+
+          <a class="link" href="tel:+970568571439">
+            <span class="icon" aria-hidden="true">
+              <!-- Phone -->
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 5c0-.55.45-1 1-1h3.49c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.19 2.2Z"/></svg>
+            </span>
+            <span>اتصال مباشر</span>
+          </a>
+
+          <a class="link" href="https://www.facebook.com/profile.php?id=61575426830763" target="_blank" rel="noopener">
+            <span class="icon" aria-hidden="true">
+              <!-- Facebook -->
+              <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.71 4.53-4.71 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.28h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+            </span>
+            <span>Facebook</span>
+          </a>
+
+          <a class="link" href="https://www.instagram.com/malcement/" target="_blank" rel="noopener">
+            <span class="icon" aria-hidden="true">
+              <!-- Instagram -->
+              <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.85A5.15 5.15 0 1 1 6.85 12 5.16 5.16 0 0 1 12 6.85Zm0 1.8A3.35 3.35 0 1 0 15.35 12 3.35 3.35 0 0 0 12 8.65Z"/></svg>
+            </span>
+            <span>Instagram</span>
+          </a>
+
+          <a class="link" href="https://www.tiktok.com/@malcement?_r=1&_t=ZS-97BODCibkOd" target="_blank" rel="noopener">
+            <span class="icon" aria-hidden="true">
+              <!-- TikTok -->
+              <svg viewBox="0 0 24 24"><path d="M16.98 0c.17 1.42.98 2.77 2.12 3.63 1.14.86 2.6 1.17 3.9 1.1v3.35c-1.87.06-3.69-.47-5.22-1.52v7.53c0 3.8-3.08 6.88-6.88 6.88S4.02 17.89 4.02 14.09s3.08-6.88 6.88-6.88c.33 0 .66.03.98.08v3.47a3.47 3.47 0 1 0 2.42 3.33V0h2.68Z"/></svg>
+            </span>
+            <span>TikTok</span>
+          </a>
+        </div>
+
+        <div class="mini-contact">
+          <p class="mini-title">تواصلوا معنا مباشر</p>
+          <p class="mini-line">الهاتف: <span dir="ltr">0568571439</span> | واتساب الأعمال: <span dir="ltr">+970566571439</span></p>
+          <p class="mini-line">البريد الإلكتروني: <a href="mailto:malcement.ltd@gmail.com">malcement.ltd@gmail.com</a></p>
+          <p class="mini-line">العنوان: بيت لحم - الخضر - دوار البالوع - طلعة قصقص</p>
+        </div>
+
+        <div class="footer">Malcement © جميع الحقوق محفوظة</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
