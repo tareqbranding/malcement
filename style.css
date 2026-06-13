@@ -1,0 +1,19 @@
+# Malcement Linktree Landing Page
+
+Static landing page for GitHub Pages.
+
+## Files
+- `index.html`
+- `style.css`
+- `assets/malcement-logo.png`
+
+## How to upload to GitHub Pages
+1. Create a new GitHub repository.
+2. Upload these files exactly as they are.
+3. Go to Settings → Pages.
+4. Under Build and deployment, choose Deploy from a branch.
+5. Choose `main` branch and `/root`.
+6. Save.
+
+## Email
+Email added: malcement.ltd@gmail.com
